@@ -8,6 +8,23 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+<style>
+.mySlides {display:none}
+.w3-badge {cursor:pointer;height:13px;width:13px;padding:0}
+.w3-white, .w3-hover-white:hover {
+	background-color:white !important;
+}
+.w3-border {
+	border:1px solid #ccc!important;
+}
+.w3-badge {
+	border-radius:50%;
+}
+.w3-badge, .w3-tag {
+	display:inline-block;
+	text-align:center;
+}
+</style>
 	<body>
 
 		<!-- Wrapper -->
@@ -22,7 +39,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Vitrine</a></li>
+							<li class="active"><a href="vitrine.html">Vitrine</a></li>
 							<li><a href="dorval.html">Client | Dorval</a></li>
 							<li><a href="salon.html">Salon</a></li>
 							<li><a href="chambre.html">Chambre d'étudiant</a></li>
@@ -37,55 +54,27 @@
 
 						<!-- Featured Post -->
 							<article class="post featured">
-								<!-- <header class="major">
-									<span class="date">2018</span>
-									<h2>Project Yohji Yamamoto</h2>
-									<p>Upcoming</p>
-								</header> -->
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.001.jpeg" alt="" onclick="window.open(this.src)" onclick="window.open(this.src)"/></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.002.jpeg" alt="" onclick="window.open(this.src)" onclick="window.open(this.src)"/></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.003.jpeg" alt="" onclick="window.open(this.src)" onclick="window.open(this.src)"/></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.004.jpeg" alt="" onclick="window.open(this.src)" onclick="window.open(this.src)"/></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.005.jpeg" alt="" onclick="window.open(this.src)" onclick="window.open(this.src)"/></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.006.jpeg" alt="" onclick="window.open(this.src)" onclick="window.open(this.src)"/></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.007.jpeg" alt="" onclick="window.open(this.src)" onclick="window.open(this.src)"/></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.008.jpeg" alt="" onclick="window.open(this.src)" onclick="window.open(this.src)"/></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.009.jpeg" alt="" onclick="window.open(this.src)" onclick="window.open(this.src)"/></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.010.jpeg" alt="" onclick="window.open(this.src)" /></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.011.jpeg" alt="" onclick="window.open(this.src)" /></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.012.jpeg" alt="" onclick="window.open(this.src)" /></a>
-							</article>
-							<article class="post featured">
-								<a href="#" class="image main"><img src="images/vitrine/vitrine.013.jpeg" alt="" onclick="window.open(this.src)" /></a>
+								<a href="#" class="image main">
+									<div class="w3-content w3-display-container" style="max-width:700px">
+										<a href="chambre.html"><img class="mySlides" src="images/thumbnails/chambre.jpg" style="width:100%"></a>
+										<a href="salon.html"><img class="mySlides" src="images/thumbnails/salon.jpg" style="width:100%"></a>
+										<a href="vitrine.html"><img class="mySlides" src="images/thumbnails/virtine.jpg" style="width:100%"></a>
+										<a href="dorval.html"><img class="mySlides" src="images/thumbnails/dorval.jpg" style="width:100%"></a>
+										<a href="graphic.html"><img class="mySlides" src="images/thumbnails/graphic.jpg" style="width:100%"></a>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+									</div>
+								</a>
 							</article>
 					</div>
 
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Copyright Sumin Bae</li></ul>
+						<ul><li>&copy;Copyright Sumin Bae</li></ul>
 					</div>
 
 			</div>
@@ -99,5 +88,49 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				var slideIndex = 1;
+				showDivs(slideIndex);
+				
+				function plusDivs(n) {
+				  showDivs(slideIndex += n);
+				}
+				
+				function currentDiv(n) {
+				  showDivs(slideIndex = n);
+				}
+				
+				function showDivs(n) {
+				  var i;
+				  var x = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("demo");
+				  if (n > x.length) {slideIndex = 1}    
+				  if (n < 1) {slideIndex = x.length}
+				  for (i = 0; i < x.length; i++) {
+					 x[i].style.display = "none";  
+				  }
+				  for (i = 0; i < dots.length; i++) {
+					 dots[i].className = dots[i].className.replace(" w3-white", "");
+				  }
+				  x[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " w3-white";
+				}
+			</script>
+			<script>
+				var myIndex = 0;
+				carousel();
+				
+				function carousel() {
+					var i;
+					var x = document.getElementsByClassName("mySlides");
+					for (i = 0; i < x.length; i++) {
+					   x[i].style.display = "none";  
+					}
+					myIndex++;
+					if (myIndex > x.length) {myIndex = 1}    
+					x[myIndex-1].style.display = "block";  
+					setTimeout(carousel, 2000); // Change image every 2 seconds
+				}
+			</script>
 	</body>
 </html>
