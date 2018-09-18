@@ -21,19 +21,29 @@
 	</head>
 <style>
 .mySlides {display:none}
-.w3-badge {cursor:pointer;height:13px;width:13px;padding:0}
-.w3-white, .w3-hover-white:hover {
+.w3-badge {
+	cursor:pointer;
+	height:13px;
+	width:13px;
+	padding:0;
+	border-radius:50%;
+}
+.w3-white {
 	background-color:white !important;
+}
+.w3-hover-white:hover {
+	background-color:#000 !important;
+	border:1px solid #000!important;
 }
 .w3-border {
 	border:1px solid #ccc!important;
 }
-.w3-badge {
-	border-radius:50%;
-}
 .w3-badge, .w3-tag {
 	display:inline-block;
 	text-align:center;
+}
+.mySlides {
+	width:100%;
 }
 </style>
 	<body>
@@ -67,16 +77,20 @@
 							<article class="post featured">
 								<a href="#" class="image main">
 									<div class="w3-content w3-display-container" style="max-width:700px">
-										<a href="chambre.html"><img class="mySlides" src="images/thumbnails/chambre.jpg" style="width:100%"></a>
-										<a href="salon.html"><img class="mySlides" src="images/thumbnails/salon.jpg" style="width:100%"></a>
-										<a href="vitrine.html"><img class="mySlides" src="images/thumbnails/virtine.jpg" style="width:100%"></a>
-										<a href="dorval.html"><img class="mySlides" src="images/thumbnails/dorval.jpg" style="width:100%"></a>
-										<a href="graphic.html"><img class="mySlides" src="images/thumbnails/graphic.jpg" style="width:100%"></a>
+										<a href="chambre.html"><img class="mySlides" src="images/thumbnails/chambre.jpg" ></a>
+										<a href="salon.html"><img class="mySlides" src="images/thumbnails/salon.jpg"></a>
+										<a href="vitrine.html"><img class="mySlides" src="images/thumbnails/virtine.jpg"></a>
+										<a href="dorval.html"><img class="mySlides" src="images/thumbnails/dorval.jpg" ></a>
+										<a href="salleamanger.html"><img class="mySlides" src="images/thumbnails/salleamanger.jpg" ></a>
+										<a href="hotel.html"><img class="mySlides" src="images/thumbnails/hotel.jpg" ></a>
+										<a href="graphic.html"><img class="mySlides" src="images/thumbnails/graphic.jpg"></a>
 										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
 										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
 										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
 										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
 										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(7)"></span>
 									</div>
 								</a>
 							</article>
@@ -140,7 +154,7 @@
 					myIndex++;
 					if (myIndex > x.length) {myIndex = 1}    
 					x[myIndex-1].style.display = "block";  
-					setTimeout(carousel, 2000); // Change image every 2 seconds
+					setTimeout(carousel, 3000); // Change image every 3 seconds
 				}
 			</script>
 	</body>
