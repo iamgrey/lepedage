@@ -3448,7 +3448,6 @@ input, select, textarea {
 				#intro .actions {
 					display: none;
 				}
-
 		}
 
 /* Header */
@@ -4352,7 +4351,7 @@ input, select, textarea {
 		line-height: 1.5;
 		text-align: center;
 		text-transform: uppercase;
-		margin: 0 auto;
+		margin: 0 auto 1rem auto;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
 		z-index: 2;
@@ -4418,12 +4417,6 @@ input, select, textarea {
 					padding-left: 0;
 				}
 
-		@media screen and (max-width: 1280px) {
-
-			#copyright {
-				margin: 0 auto;
-			}
-		}
 
 		@media screen and (max-width: 480px) {
 
