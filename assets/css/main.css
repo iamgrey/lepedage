@@ -4527,7 +4527,9 @@ input, select, textarea {
 					padding: 0.75rem 0;
 					text-transform: uppercase;
 				}
-
+				#navPanel .links li.active a {
+					font-weight:600;
+				}
 				#navPanel .links li:first-child {
 					border-top: 0;
 				}
